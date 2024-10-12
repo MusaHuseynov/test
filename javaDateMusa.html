@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="date"></h1>
+    <button onclick="numberMusa()">tam gunu gosder qaliqsiz</button>
+    <script>
+
+        let a = prompt("Dogum tarixinizi il-ay-gun olaraq qeyd edin")
+        let dogumTarixi = new Date(a)
+        let indikiTarix = new Date()
+        let millisaniye = indikiTarix - dogumTarixi
+        let gun = (((millisaniye / 1000) / 60) / 60) / 24
+        document.getElementById("date").innerHTML = gun;
+
+        function numberMusa() {
+            let netice = parseInt(gun)
+            document.getElementById("date").innerHTML = netice;
+        }
+
+    </script>
+</body>
+
+</html>
